@@ -1,0 +1,256 @@
+                /* :root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+} */
+                
+                * {
+                    font-family: 'Sora', sans-serif;
+                    line-height: 1.7;
+                    scroll-behavior: smooth;
+                }
+                
+                .navbar {
+                    text-transform: uppercase;
+                    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+                }
+                
+                .navbar .nav-link {
+                    font-size: 14px;
+                    color: #ff8800;
+                    font-weight: 700;
+                    padding: 10px;
+                }
+                
+                .navbar .nav-link.active {
+                    color: #ff8800;
+                    text-decoration: underline;
+                }
+                
+                .hero {
+                    height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    background-position: center;
+                    background-image: url('../images/bg-img2.jpg');
+                    background-size: cover;
+                    background-attachment: fixed;
+                    position: relative;
+                    z-index: 2;
+                    font-weight: 700;
+                }
+                
+                .hero::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(21, 20, 51, 0.8);
+                    z-index: -1;
+                }
+                
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                .display-4 {
+                    color: rgb(0, 0, 0);
+                    font-weight: bold;
+                    color: #fff;
+                }
+                
+                #text-one {
+                    font-weight: 700;
+                }
+                
+                a {
+                    color: #21252f;
+                    text-decoration: none;
+                }
+                /*SERVICES SECTION STARTS HERE*/
+                
+                section {
+                    padding-top: 120px;
+                    padding-bottom: 120px;
+                    background-color: #fff;
+                }
+                
+                .card-effect {
+                    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+                    /* box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #fff; */
+                    background-color: #fff;
+                    transition: all 0.35s ease;
+                    padding: 25px;
+                    margin-top: 20px
+                }
+                
+                .card-effect:hover {
+                    /* box-shadow: -6px -6px 12px #c5c5c5, 6px 6px 12px #fff; */
+                    box-shadow: none;
+                    transform: translateY(5px);
+                }
+                
+                .iconbox {
+                    width: 54px;
+                    height: 54px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgb(13, 110, 253);
+                    color: #fff;
+                    font-size: 22px;
+                    border-radius: 100px;
+                    flex: none;
+                }
+                
+                .iconbox img {
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 100px;
+                }
+                
+                .row {
+                    margin-bottom: 10px;
+                }
+                
+                .service {
+                    position: relative;
+                    z-index: 2;
+                    overflow: hidden;
+                }
+                
+                .service h5 {
+                    color: #000;
+                }
+                
+                .service::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: -100%;
+                    left: 0;
+                    background-color: #2e333a;
+                    z-index: -1;
+                    opacity: 0;
+                    transition: all 0.4s ease-in-out;
+                }
+                
+                .service:hover h5,
+                .service:hover p {
+                    color: #fff;
+                }
+                
+                .service:hover::after {
+                    opacity: 1;
+                    top: 0;
+                }
+                
+                .service .iconbox {
+                    background-color: #fff;
+                    color: #0d6efd;
+                }
+                /*SERVICES SECTION ENDS HERE*/
+                /*ABOUT US STARTS*/
+                
+                .col-img {
+                    background-image: url('../images/business-man.jpg');
+                    background-position: center;
+                    background-size: cover;
+                    min-height: 500px;
+                }
+                /*ABOUT US ENDS*/
+                
+                @media (min-width:320px) and (max-width:480px) {
+                    .hero {
+                        height: 80vh;
+                        display: flex;
+                        align-items: center;
+                        background-position: center;
+                        background-image: url('../images/bg-img2.jpg');
+                        background-size: cover;
+                        background-attachment: fixed;
+                        position: relative;
+                        z-index: 2;
+                        font-weight: 700;
+                        justify-content: center;
+                    }
+                    .col-lg-7 h1 {
+                        color: #fff;
+                        font-size: 2rem;
+                        margin-right: 15px;
+                    }
+                    .col-md-10 h2 {
+                        color: #000;
+                    }
+                    .navbar {
+                        width: 100vw;
+                    }
+                    .col-img {
+                        background-image: url('../images/business-man.jpg');
+                        background-position: center;
+                        background-size: cover;
+                        left: 20px;
+                    }
+                    .col-md-10 h5 {
+                        font-size: 2rem;
+                        color: #4285F4;
+                        font-weight: 700;
+                    }
+                    .col-md-10 h2 {
+                        font-size: 1rem;
+                    }
+                    .col-md-10 p {
+                        text-align: justify;
+                    }
+                    .feature h4 {
+                        color: #000;
+                    }
+                    .ml-3 {
+                        padding-top: 1rem;
+                    }
+                    .ml-3 h4 {
+                        font-weight: 500;
+                        margin-top: -1rem;
+                    }
+                    .ml-3 p {
+                        padding-top: 0px;
+                    }
+                    .iconbox {
+                        height: 3rem;
+                        width: 3rem;
+                    }
+                    .feature {
+                        margin-top: 1rem;
+                    }
+                    #feature-div {
+                        padding-top: 2rem;
+                    }
+                    #feature-div h4 {
+                        margin-top: -2rem;
+                    }
+                    .col-md-8 h6 {
+                        font-size: 2rem;
+                        margin-top: -2rem;
+                        font-weight: 600;
+                    }
+                    .col-md-8 h1 {
+                        font-size: 1rem;
+                        padding-top: 1rem;
+                        color: #000;
+                    }
+                    .col-md-8 p {
+                        font-size: 1rem;
+                        padding-top: 1rem;
+                        color: #000;
+                        font-weight: bold;
+                    }
+                    .card-effect:hover h5 {
+                        color: #fff;
+                    }
+                }
